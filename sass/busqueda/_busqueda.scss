@@ -1,0 +1,46 @@
+@use "../base/variables" as v;
+@use "../base/mixin" as m;
+
+.busqueda{
+    background-color: v.$gris-Claro;
+    padding: 40px 0;
+    .busqueda__heading{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .formulario{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        @include m.telefono{
+            flex-direction: column;
+        }
+
+        .formulario__campo{
+            padding: 10px;
+            width: 250px;
+            border: solid 1px v.$gris-Claro;
+
+            @include m.telefono{
+                width: 100%;
+            }
+        }
+
+        .formulario__submit{
+            padding: 8px;
+            background-color: v.$rojo;
+            border: none;
+            width: 200px;
+            color: v.$blanco;
+            cursor: pointer;
+            font-weight: bold;
+
+            @include m.telefono{
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@use "../base/variables" as v;
+@use "../base/mixin" as m;
+
+.hero{
+    background-image: url("../../img/hero.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .hero__texto{
+        text-align: center;
+        color: v.$blanco;
+        span{
+            display: block;
+        }
+
+        @include m.telefono{
+            font-size: 30px;
+        }
+    }
+    .hero__enlace{
+        display: block;
+        margin-top: 20px;
+        background-color: v.$naranja;
+        color: v.$blanco;
+        width: 200px;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+    }
+}

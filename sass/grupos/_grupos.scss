@@ -1,0 +1,34 @@
+@use "../base/variables" as v;
+@use "../base/mixin" as m;
+
+.grupos{
+    .grupos__grid{
+        @include m.grid(2,0);
+
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .grupos__bloque{
+            padding: 50px 20px;
+
+            .grupos__heading,
+            .grupos__texto{
+                color: v.$blanco;
+            }
+            .grupos__heading{
+                margin-bottom: 20px;
+            }
+            .grupos__texto{
+                line-height: 24px;
+            }
+            &:nth-child(1){
+                background-color: v.$rojo;
+            }
+            &:nth-child(2){
+                background-color: v.$azul;
+            }
+        }
+    }
+}

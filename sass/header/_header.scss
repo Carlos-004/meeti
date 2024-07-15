@@ -1,0 +1,13 @@
+@use "../base/variables" as v;
+@use "../base/mixin" as m;
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include m.telefono{
+        justify-content: unset;
+        flex-direction: column;
+    }
+}

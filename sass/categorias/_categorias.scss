@@ -1,0 +1,29 @@
+@use "../base/variables" as v;
+@use "../base/mixin" as m;
+
+.categorias{
+    background-color: v.$gris-Claro;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    .categorias__heading{
+        text-align: center;
+        padding: 20px
+    }
+
+    .categorias__grid{
+        @include m.grid(3,20px);
+
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .categoria{
+            .categoria__nombre{
+                text-align: center;
+                margin-top: 10px;
+                font-weight: bold;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@use "../base/variables" as v;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: v.$fuentePrincipal;
+    font-size: 16px;
+}
+.contenedor {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+img {
+    width: 100%;
+}
+ul{
+    list-style: none;
+}

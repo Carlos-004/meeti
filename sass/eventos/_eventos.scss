@@ -1,0 +1,52 @@
+@use "../base/variables" as v;
+@use "../base/mixin" as m;
+
+.eventos{
+    margin-top: 40px;
+    .eventos__heading{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .eventos__grid{
+        @include m.grid(3,20px);
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+        }   
+    }
+}
+
+.evento{
+    border: solid 1px v.$gris-Claro;
+    @include m.telefono{
+        margin-bottom: 20px;
+    }
+    .evento__contenido{
+        padding:20px 10px;
+        .evento__fecha{
+            margin-bottom: 15px;
+        }
+        
+        .evento__autor{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+
+            .evento__autor-imagen{
+                img{
+                    width: 100px;
+                    border-radius: 100%;
+                }
+            }
+
+            .evento__autor-informacion{
+                .evento__organizado-texto{
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

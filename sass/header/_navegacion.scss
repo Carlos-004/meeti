@@ -1,0 +1,21 @@
+@use "../base/variables" as v;
+@use "../base/mixin" as m;
+
+.navegacion{
+    .navegacion__enlace{
+        padding: 10px;
+    }
+    .navegacion__enlace--crear{
+        color: v.$rojo;
+        border-right: solid 1px v.$gris-Claro;
+        @include m.telefono{
+            border: none;
+        }
+    }
+
+    @include m.telefono{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
